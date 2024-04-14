@@ -50,7 +50,6 @@
             font-size: 24px;
             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
@@ -59,6 +58,9 @@
         <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-swot/')">SWOT</button>
         <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-arvore-de-poblema/')">Árvore de Problemas</button>
         <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-5forcas-de-porter/')">5 Forças de Porter</button>
+    </div>
+<BR>
+	<button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw_connect_panel/')">PAINEL </button>
     </div>
 
     <div id="popup" class="popup">
@@ -72,20 +74,6 @@
         function openPopup(toolUrl) {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('tool-iframe').src = toolUrl;
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('tool-iframe').src = '';
-        }
-    </script>
-</body>
-</html>
-
-    <script>
-        function openPopup(tool) {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('tool-iframe').src = tool + '.html';
         }
 
         function closePopup() {
