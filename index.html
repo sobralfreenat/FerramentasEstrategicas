@@ -8,21 +8,34 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 20px 20px 20px 200px;
         }
         h1 {
             text-align: center;
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        .tool-button {
-            padding: 15px 30px;
+        .menu-item {
+            display: block;
+            padding: 15px;
             font-size: 18px;
-            margin: 0 10px;
+            margin-bottom: 10px;
             cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+        .menu-item:hover {
+            background-color: #ccc;
         }
         .popup {
             display: none;
@@ -53,15 +66,17 @@
     </style>
 </head>
 <body>
+    <div class="sidebar">
+		<button class="menu-item" onclick="openPopup('https://sobralfreenat.github.io/fnw_connect_panel//')">Painel</button>
+        <button class="menu-item" onclick="openPopup('https://sobralfreenat.github.io/fnw-swot/')">SWOT</button>
+        <button class="menu-item" onclick="openPopup('https://sobralfreenat.github.io/fnw-arvore-de-poblema/')">Árvore de Problemas</button>
+        <button class="menu-item" onclick="openPopup('https://sobralfreenat.github.io/fnw-5forcas-de-porter/')">5 Forças de Porter</button>
+
+<button class="menu-item" onclick="openPopup('https://sobralfreenat.github.io/3dpannerweb2')">DEMO 3D</button>
+    </div>
+
+
     <h1>Ferramentas de Análise Estratégica</h1>
-    <div class="button-container">
-        <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-swot/')">SWOT</button>
-        <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-arvore-de-poblema/')">Árvore de Problemas</button>
-        <button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw-5forcas-de-porter/')">5 Forças de Porter</button>
-    </div>
-<BR>
-	<button class="tool-button" onclick="openPopup('https://sobralfreenat.github.io/fnw_connect_panel/')">PAINEL </button>
-    </div>
 
     <div id="popup" class="popup">
         <div class="popup-content">
